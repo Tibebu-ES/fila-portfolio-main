@@ -52,7 +52,7 @@ class AppPanelProvider extends PanelProvider
             ->authMiddleware([
             ])
             ->topNavigation(true)
-            ->favicon(asset('storage/favicon.png'))
+            ->favicon(fn() => $this->app->environment('production') ? secure_asset('storage/favicon.png') : asset('storage/favicon.png'))
             ->brandLogo(fn() => view('logos.logo'))
             ->darkModeBrandLogo(fn() => view('logos.logo-dark'))
             ->viteTheme('resources/css/filament/app/theme.css');

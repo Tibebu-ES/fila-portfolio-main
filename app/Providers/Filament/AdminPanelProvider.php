@@ -54,7 +54,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->favicon(asset('storage/favicon.png'))
+            ->favicon(fn() => $this->app->environment('production') ? secure_asset('storage/favicon.png') : asset('storage/favicon.png'))
             ->brandLogo(fn() => view('logos.logo'))
             ->darkModeBrandLogo(fn() => view('logos.logo-dark'));
     }

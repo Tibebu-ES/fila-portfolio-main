@@ -23,7 +23,6 @@ class AppServiceProvider extends ServiceProvider
         // force https only in production
         if($this->app->environment('production')){
             URL::forceScheme('https');
-            $this->app['request']->server->set('HTTPS', true);
         }
     }
 }
