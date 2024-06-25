@@ -1,9 +1,8 @@
 <x-filament-panels::page >
-    <div class="grid md:grid-cols-2   md:divide-x bg-primary-900 dark:bg-gray-950 drop-shadow-xl">
+    <div class="grid md:grid-cols-2   md:divide-x bg-primary-900 dark:bg-gray-950 drop-shadow-xl rounded-lg">
         <div class="flex justify-center items-center flex-col w-full gap-4 text-white">
-            <h1 class="text-2xl">Hello! </h1>
-            <h1 class="text-2xl">I'm <span class="text-4xl">{{$profile['name']}}</span></h1>
-            <h1 class="text-2xl">A TALL stack developer</h1>
+            <h1 class="text-4xl">{{$profile['name']}}</h1>
+            <h1 class="text-2xl">A TALL Stack Developer</h1>
             <div class="grid grid-cols-4 mt-4">
                 <div class="flex flex-col items-center justify-center h-12 gap-2 ">
                     <svg class="h-1/2 w-auto" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +51,7 @@
             </div>
         </div>
         <div class="flex justify-center items-center " >
-            <img src="{{asset('/storage/profile.png')}}" class="h-2/3  rounded-full " >
+            <img src="{{asset('/storage/profile.png')}}" class="h-[90%]  rounded-full ring-1 ring-white " >
         </div>
     </div>
 
