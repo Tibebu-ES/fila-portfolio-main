@@ -6,7 +6,7 @@ use Filament\Pages\Page;
 
 class Home extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-m-home';
+    protected static ?string $navigationIcon = '';
 
     protected static string $view = 'filament.app.pages.home';
 

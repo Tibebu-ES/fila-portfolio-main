@@ -1,3 +1,87 @@
 @import '/vendor/filament/filament/resources/css/theme.css';
 
 @config 'tailwind.config.js';
+
+@layer base {
+    body, .fi-topbar nav, .fi-sidebar-nav, .fi-sidebar-header{
+        @apply bg-gray-500 text-white !important;
+
+    }
+    .fi-section-content{
+        @apply bg-gray-700 text-white !important;
+
+    }
+
+
+}
+
+.fi-topbar nav {
+    @apply ring-white/10 drop-shadow-lg
+}
+
+.fi-topbar-item-active, .fi-topbar-item:hover{
+    .fi-topbar-item-button{
+        @apply bg-transparent ;
+
+    }
+    .fi-topbar-item-button {
+        .fi-topbar-item-label, .fi-topbar-item-icon{
+            @apply text-primary-600 border-b border-primary-600 !important;
+        }
+
+    }
+
+}
+.fi-topbar-item {
+    .fi-topbar-item-button {
+        .fi-topbar-item-label, .fi-topbar-item-icon{
+            @apply text-white
+        }
+
+    }
+
+
+}
+
+.fi-sidebar-item {
+    .fi-sidebar-item-button {
+        .fi-sidebar-item-label, .fi-sidebar-item-icon{
+            @apply text-white
+        }
+
+    }
+
+}
+
+.fi-sidebar-item-active, .fi-sidebar-item:hover{
+    .fi-sidebar-item-button{
+        @apply bg-transparent
+
+    }
+    .fi-sidebar-item-button {
+        .fi-sidebar-item-label, .fi-sidebar-item-icon{
+            @apply text-primary-600  !important;
+        }
+
+    }
+
+}
+
+.fi-fo-field-wrp-label span {
+    @apply  text-white !important;
+}
+
+.fi-input-wrp {
+    @apply ring-1 ring-white/10 bg-gray-500
+}
+
+.fi-input, .fi-fo-textarea textarea {
+    @apply bg-gray-500  text-white
+}
+
+
+
+
+
+
+

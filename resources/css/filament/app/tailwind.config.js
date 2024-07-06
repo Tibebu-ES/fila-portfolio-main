@@ -7,4 +7,14 @@ export default {
         './resources/views/filament/app/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
     ],
+    extend : {
+        colors : {
+            primary: '#1c1c22',
+            accent: {
+                DEFAULT: '#00ff99',
+                hover: '#00e187'
+            }
+        }
+
+    }
 }

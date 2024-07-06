@@ -28,7 +28,9 @@ class AppPanelProvider extends PanelProvider
             ->id('app')
             ->path('/')
             ->colors([
-                'primary' => Color::Green,
+                'primary' => "#00ff99",
+                'gray' => "#1c1c22"
+
             ])
             ->discoverResources(in: app_path('Filament/App/Resources'), for: 'App\\Filament\\App\\Resources')
             ->discoverPages(in: app_path('Filament/App/Pages'), for: 'App\\Filament\\App\\Pages')
@@ -53,7 +55,7 @@ class AppPanelProvider extends PanelProvider
             ])
             ->topNavigation(true)
             ->favicon(fn() => $this->app->environment('production') ? secure_asset('storage/favicon.png') : asset('storage/favicon.png'))
-            ->brandLogo(fn() => view('logos.logo'))
+            ->brandLogo(fn() => view('logos.logo-dark'))
             ->darkModeBrandLogo(fn() => view('logos.logo-dark'))
             ->viteTheme('resources/css/filament/app/theme.css');
     }
