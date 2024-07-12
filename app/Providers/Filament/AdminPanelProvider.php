@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -28,7 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => "#00ff99",
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -56,6 +57,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->favicon(fn() => $this->app->environment('production') ? secure_asset('storage/favicon.png') : asset('storage/favicon.png'))
             ->brandLogo(fn() => view('logos.logo'))
-            ->darkModeBrandLogo(fn() => view('logos.logo-dark'));
+            ->darkModeBrandLogo(fn() => view('logos.logo-dark'))
+            ->defaultThemeMode(ThemeMode::Dark);
     }
 }

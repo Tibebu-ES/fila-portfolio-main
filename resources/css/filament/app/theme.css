@@ -79,6 +79,10 @@
     @apply bg-gray-500  text-white
 }
 
+.fi-header-heading {
+    @apply text-primary-500 dark:text-primary-500 !important
+}
+
 
 
 

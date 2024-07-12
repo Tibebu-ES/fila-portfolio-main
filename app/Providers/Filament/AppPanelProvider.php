@@ -11,6 +11,7 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\Support\Enums\MaxWidth;
 use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -57,6 +58,14 @@ class AppPanelProvider extends PanelProvider
             ->favicon(fn() => $this->app->environment('production') ? secure_asset('storage/favicon.png') : asset('storage/favicon.png'))
             ->brandLogo(fn() => view('logos.logo-dark'))
             ->darkModeBrandLogo(fn() => view('logos.logo-dark'))
-            ->viteTheme('resources/css/filament/app/theme.css');
+            ->viteTheme('resources/css/filament/app/theme.css')
+            ->darkMode(false,true)
+            ->renderHook(
+            // This line tells us where to render it
+                'panels::body.end',
+                // This is the view that will be rendered
+                fn () => view('footer'),
+            )
+            ->maxContentWidth(MaxWidth::ScreenLarge);
     }
 }
