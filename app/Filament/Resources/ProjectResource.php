@@ -32,6 +32,7 @@ class ProjectResource extends Resource
                 Forms\Components\FileUpload::make('featured_image')
                     ->image()
                     ->required()
+                    ->disk('public')
                     ->directory('project-images')
                     ->imageEditor(),
                 Forms\Components\TagsInput::make('skill_tags')
