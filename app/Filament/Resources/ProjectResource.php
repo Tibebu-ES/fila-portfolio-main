@@ -33,7 +33,7 @@ class ProjectResource extends Resource
                     ->image()
                     ->required()
                     ->disk('public')
-                    ->directory('project-images')
+                    //->directory('project-images')
                     ->imageEditor(),
                 Forms\Components\TagsInput::make('skill_tags')
                     ->label('Skills')
