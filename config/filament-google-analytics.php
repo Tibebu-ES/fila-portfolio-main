@@ -16,22 +16,22 @@ return [
         'global' => true,
     ],
     'visitors' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => true,
     ],
 
     'active_users_one_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => true,
     ],
 
     'active_users_seven_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => true,
     ],
 
     'active_users_twenty_eight_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false,
     ],
 

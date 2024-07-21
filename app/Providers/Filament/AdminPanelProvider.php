@@ -41,7 +41,11 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
-                GoogleWidgets\PageViewsWidget::class
+                GoogleWidgets\PageViewsWidget::class,
+                GoogleWidgets\VisitorsWidget::class,
+                GoogleWidgets\ActiveUsersOneDayWidget::class,
+                GoogleWidgets\ActiveUsersSevenDayWidget::class,
+                GoogleWidgets\ActiveUsersTwentyEightDayWidget::class,
 
             ])
             ->middleware([
