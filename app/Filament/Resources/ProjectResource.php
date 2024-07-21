@@ -32,8 +32,7 @@ class ProjectResource extends Resource
                 Forms\Components\FileUpload::make('featured_image')
                     ->image()
                     ->required()
-                    ->disk('public')
-                    //->directory('project-images')
+                    ->directory('project-images')
                     ->imageEditor(),
                 Forms\Components\TagsInput::make('skill_tags')
                     ->label('Skills')
@@ -42,6 +41,9 @@ class ProjectResource extends Resource
                         'alpinejs',
                         'laravel',
                         'livewire',
+                        'jQuery',
+                        'PHP',
+                        'CodeIgniter'
                     ]),
                 Forms\Components\TextInput::make('repo_url')
                     ->maxLength(255),
