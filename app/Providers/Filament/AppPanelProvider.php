@@ -66,6 +66,12 @@ class AppPanelProvider extends PanelProvider
                 // This is the view that will be rendered
                 fn () => view('footer'),
             )
+            ->renderHook(
+            // This line tells us where to render it
+                'panels::head.start',
+                // This is the view that will be rendered
+                fn () => view('analyticsTag'),
+            )
             ->maxContentWidth(MaxWidth::ScreenLarge);
     }
 }
